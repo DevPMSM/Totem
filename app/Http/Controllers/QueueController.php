@@ -9,7 +9,15 @@ use Illuminate\Support\Facades\Auth;
 
 class QueueController extends Controller
 {
-    private $queueNames = ['Sala A', 'Sala B', 'Sala C'];
+    private $queueNames = [
+        ['name' => 'Assistência Social', 'color' => '#F56565'],
+        ['name' => 'Cadastro Imobiliário', 'color' => '#ED8936'],
+        ['name' => 'Protocolo', 'color' => '#4299E1'],
+        ['name' => 'Planejamento', 'color' => '#48BB78'],
+        ['name' => 'Procuradoria', 'color' => '#ED64A6'],
+        ['name' => 'Tributário', 'color' => '#9F7AEA'],
+        ['name' => 'SINE', 'color' => '#3182CE'],
+    ];
 
     public function index()
     {
@@ -25,8 +33,8 @@ class QueueController extends Controller
 
         $newTicket = DB::transaction(function () use ($request) {
             $lastTicket = Queue::where('queue_name', $request->queue_name)
-                               ->lockForUpdate()
-                               ->max('ticket_number') ?? 0;
+                                ->lockForUpdate()
+                                ->max('ticket_number') ?? 0;
             $newTicket = $lastTicket + 1;
 
             return Queue::create([
@@ -43,7 +51,6 @@ class QueueController extends Controller
             'is_preferential' => $newTicket->is_preferential
         ]);
     }
-
     public function attendantView()
     {
         $user = Auth::user();
@@ -92,3 +99,4 @@ class QueueController extends Controller
         ] : null);
     }
 }
+

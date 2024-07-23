@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">   
-    <link rel="stylesheet" href="{{ asset('assets/css/password.css') }}">   
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/password.css') }}">
     <title>Document</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
                     <h4>Número</h4>
                     <span>1</span>
                 </div>
-               
+
             </a>
             <a class="page_filho" href="#">
                 <div>
@@ -57,7 +57,7 @@
                     <h4>Número</h4>
                     <span>1</span>
                 </div>
-               
+
             </a>
             <a class="page_filho" href="#">
                 <div >
@@ -72,45 +72,46 @@
                     <h4>Número</h4>
                     <span>1</span>
                 </div>
-               
-            </a>
-            
-            
 
-        </div>             
+            </a>
+
+
+
+        </div>
     </div>  -->
-    
+
 
 
 <!-- TELA DE LOGIN  -->
-<!-- <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">   
-    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">   
-    <title>Document</title>
-</head>
-<body>
+<!--
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
+        <title>Document</title>
+    </head>
+    <body>
 
-    <div class="page">
-    
-            <form method="POST" class="formLogin">
-                <h1>Login</h1>
-                <p>Digite os seus dados de acesso no campo abaixo.</p>
-                <label for="email">E-mail</label>
-                <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
-                <label for="password">Senha</label>
-                <input type="password" placeholder="Digite sua senha" />
-                <a href="/">Esqueci minha senha</a>
-                <input type="submit" value="Acessar" class="btn" />
-            </form>
-    </div> 
- </body>
-</html>  
+        <div class="page">
+
+                <form method="POST" class="formLogin">
+                    <h1>Login</h1>
+                    <p>Digite os seus dados de acesso no campo abaixo.</p>
+                    <label for="email">E-mail</label>
+                    <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+                    <label for="password">Senha</label>
+                    <input type="password" placeholder="Digite sua senha" />
+                    <a href="/">Esqueci minha senha</a>
+                    <input type="submit" value="Acessar" class="btn" />
+                </form>
+        </div>
+    </body>
+</html>
 
 <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
 
@@ -141,7 +142,7 @@
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Senhat</title>
@@ -170,6 +171,6 @@
         <button>Concluir</button>
         </div>
     </div>
-    
+
 </body>
 </html>

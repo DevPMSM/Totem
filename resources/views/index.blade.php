@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Filas</title>
+    <title>Auto-atendimento</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-8 text-center">Sistema de Filas</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            @foreach($queueNames as $queueName)
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h2 class="text-xl font-semibold mb-4">{{ $queueName }}</h2>
-                    <button onclick="openModal('{{ $queueName }}')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Gerar Senha</button>
+            @foreach($queueNames as $index => $queue)
+                <div class="service-card bg-white" data-digit="Digite {{ $index + 1 }}" style="--card-color: {{ $queue['color'] }};">
+                    <h2 class="text-xl font-semibold mb-4" style="color: {{ $queue['color'] }};">{{ $queue['name'] }}</h2>
+                    <button onclick="openModal('{{ $queue['name'] }}')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Gerar Senha</button>
                 </div>
             @endforeach
         </div>
