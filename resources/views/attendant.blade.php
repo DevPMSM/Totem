@@ -13,7 +13,12 @@
         <div class="bg-white rounded-lg shadow-md p-6">
             <h2 class="text-xl font-semibold mb-4">Senha Atual</h2>
             <p id="currentTicket" class="text-2xl font-bold mb-4">
-                {{ $currentTicket ? $currentTicket->ticket_number . ($currentTicket->is_preferential ? ' (Preferencial)' : '') : 'Nenhuma' }}
+                @if($currentTicket)
+                    <p>Próxima senha: {{ $currentTicket->ticket_number }} ({{ $currentTicket->is_preferential ? 'Preferencial' : 'Normal' }})</p>
+                    <p>Serviço: {{ $currentTicket->service_name }}</p>
+                @else
+                    <p>Nenhuma senha na fila.</p>
+                @endif
             </p>
             <button onclick="callNext()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Chamar Próximo</button>
         </div>

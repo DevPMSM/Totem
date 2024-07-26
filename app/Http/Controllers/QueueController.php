@@ -24,11 +24,15 @@ class QueueController extends Controller
         return view('index', ['queueNames' => $this->queueNames]);
     }
 
+
+
     public function generateTicket(Request $request)
     {
         $request->validate([
             'queue_name' => 'required|string',
             'is_preferential' => 'required|boolean',
+            'service_id' => 'required|integer',
+            'service_name' => 'required|string',
         ]);
 
         $newTicket = DB::transaction(function () use ($request) {
@@ -41,6 +45,8 @@ class QueueController extends Controller
                 'queue_name' => $request->queue_name,
                 'ticket_number' => $newTicket,
                 'is_preferential' => $request->is_preferential,
+                'service_id' => $request->service_id,
+                'service_name' => $request->service_name,
                 'status' => 'waiting'
             ]);
         });
@@ -48,9 +54,12 @@ class QueueController extends Controller
         return response()->json([
             'queue_name' => $newTicket->queue_name,
             'ticket_number' => $newTicket->ticket_number,
-            'is_preferential' => $newTicket->is_preferential
+            'is_preferential' => $newTicket->is_preferential,
+            'service_name' => $newTicket->service_name
         ]);
     }
+
+
     public function attendantView()
     {
         $user = Auth::user();

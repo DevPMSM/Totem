@@ -1,0 +1,98 @@
+html{
+    overflow: hidden;
+}
+
+body{
+    overflow: hidden;
+    max-width: 100vw;
+    padding-left: 25px;
+    max-height: 100vh;
+}
+
+.container{
+    width: 100vw;
+    padding: 0;
+    margin: 25px 0 0 25px;
+    height: 100vh;
+}
+
+.caixa_texto{
+    justify-items: start;
+    padding: 25px 0 0 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.title h1{
+    font-family: "Lexend", sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    padding-bottom: 45px;
+}
+
+.first_line{
+    font-family: "Lexend", sans-serif;
+    padding: 5px;
+    font-weight:300;
+    font-size: 35px;
+}
+
+.foco{
+    font-weight: bold;
+}
+
+.title{
+    padding-bottom: 35px;
+}
+
+.last_line{
+    font-family: "Lexend", sans-serif;
+    padding: 5px;
+    font-weight:300;
+    font-size: 40px;
+}
+
+.enter{
+    color: #4BAA2C;
+    font-weight: 900;
+}
+
+.cancela{
+    color: #f44336;
+    font-weight: 900;
+}
+
+.alert_container{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.img_container{
+    position: static;
+    padding: 0;
+}
+
+.img_container img{
+    position: relative;
+    bottom: -40px;
+}
+
+.welcome{
+    width: 100%;
+    position: static;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome h1{
+    position: relative;
+    left: -25px;
+}
