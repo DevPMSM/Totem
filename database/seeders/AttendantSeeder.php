@@ -11,9 +11,13 @@ class AttendantSeeder extends Seeder
     public function run()
     {
         $attendants = [
-            ['name' => 'Atendente Sala A', 'email' => 'sala_a@example.com', 'password' => 'password', 'queue' => 'Sala A'],
-            ['name' => 'Atendente Sala B', 'email' => 'sala_b@example.com', 'password' => 'password', 'queue' => 'Sala B'],
-            ['name' => 'Atendente Sala C', 'email' => 'sala_c@example.com', 'password' => 'password', 'queue' => 'Sala C'],
+            ['name' => 'Atendente Assistência Social', 'email' => 'assistencia_social@totem.com', 'password' => 'Assistencia@2024', 'queue' => 'Assistência Social'],
+            ['name' => 'Atendente Cadastro Imobiliário', 'email' => 'cadastro_imobiliario@totem.com', 'password' => 'Cadastro@2024', 'queue' => 'Cadastro Imobiliário'],
+            ['name' => 'Atendente Protocolo', 'email' => 'protocolo@totem.com', 'password' => 'Protocolo@2024', 'queue' => 'Protocolo'],
+            ['name' => 'Atendente Planejamento', 'email' => 'planejamento@totem.com', 'password' => 'Planejamento@2024', 'queue' => 'Planejamento'],
+            ['name' => 'Atendente Procuradoria', 'email' => 'procuradoria@totem.com', 'password' => 'Procuradoria@2024', 'queue' => 'Procuradoria'],
+            ['name' => 'Atendente Tributário', 'email' => 'tributario@totem.com', 'password' => 'Tributario@2024', 'queue' => 'Tributário'],
+            ['name' => 'Atendente SINE', 'email' => 'sine@totem.com', 'password' => 'Sine@2024', 'queue' => 'SINE'],
         ];
 
         foreach ($attendants as $attendant) {

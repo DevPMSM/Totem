@@ -1,0 +1,139 @@
+body{
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -999;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+.service-card {
+    opacity: 0.85;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-items: center;
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+    justify-content: space-between;
+    position: relative;
+    color: white !important;
+    height: 100%;
+    background-color: var(--card-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-card h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.service-card button {
+    margin-top: auto;
+}
+
+.service-card:hover {
+    transform: scale(1.02);
+    opacity: 1.2;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.089) 70%, rgba(41, 41, 41, 0.116));
+
+}
+
+.texts_buttons{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.postits{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.postits h3{
+    background-color: white;
+    max-height: 35px;
+    padding: 5px 15px 5px 15px;
+    color: var(--card-color);
+    border-radius: 15px;
+}
+
+.postits span{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    font-size: 120px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+.container_cards{
+    border-radius: 10px;
+    transition: 1s;
+    z-index: 999;
+    background-image: linear-gradient(to left, white 70%, rgb(41, 41, 41));
+}
+
+
+
+.container_grid{
+    margin: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "assistencia cadastro cadastro"
+        "protocolo planejamento sine"
+        "procuradoria tributario sine";
+    gap: 25px;
+    height: 90%;
+}
+
+.assistencia{
+   grid-area: assistencia;
+}
+
+.cadastro{
+    grid-area: cadastro;
+}
+
+.protocolo{
+    grid-area: protocolo;
+}
+
+.planejamento{
+    grid-area: planejamento;
+}
+
+.procuradoria{
+    grid-area: procuradoria;
+}
+
+.tributario{
+    grid-area: tributario;
+}
+
+.sine{
+    grid-area: sine;
+}
+
+#ticketModal{
+    z-index: 999!important;
+}
+
