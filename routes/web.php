@@ -25,4 +25,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/attendant', [QueueController::class, 'attendantView'])->name('attendant');
     Route::post('/call-next', [QueueController::class, 'callNext'])->name('call.next');
     Route::get('/current-ticket', [QueueController::class, 'getCurrentTicket'])->name('current.ticket');
+    Route::get('/current-and-next-ticket', [QueueController::class, 'getCurrentAndNextTicket'])->name('current.and.next.ticket');
 });

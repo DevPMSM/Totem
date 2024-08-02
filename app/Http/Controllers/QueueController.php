@@ -75,27 +75,49 @@ class QueueController extends Controller
         if ($nextTicket) {
             $nextTicket->update(['status' => 'called']);
             $newCurrentTicket = $this->getNextTicket($user->queue);
-            return response()->json([
+            return response()->json($newCurrentTicket ? [
                 'queue_name' => $user->queue,
-                'ticket_number' => $newCurrentTicket ? $newCurrentTicket->ticket_number : null,
-                'is_preferential' => $newCurrentTicket ? $newCurrentTicket->is_preferential : null
-            ]);
+                'ticket_number' => $newCurrentTicket->ticket_number,
+                'is_preferential' => $newCurrentTicket->is_preferential,
+                'service_name' => $newCurrentTicket->service_name
+            ] : null);
         }
 
+        return response()->json(null);
+    }
+
+    public function getCurrentAndNextTicket(Request $request)
+    {
+        $user = Auth::user();
+        $currentTicket = $this->getNextTicket($user->queue);
+        $nextTicket = $this->getNextTicket($user->queue, $currentTicket ? $currentTicket->id : null);
+
         return response()->json([
-            'queue_name' => $user->queue,
-            'ticket_number' => null,
-            'is_preferential' => null
+            'current' => $currentTicket ? [
+                'ticket_number' => $currentTicket->ticket_number,
+                'is_preferential' => $currentTicket->is_preferential,
+                'service_name' => $currentTicket->service_name
+            ] : null,
+            'next' => $nextTicket ? [
+                'ticket_number' => $nextTicket->ticket_number,
+                'is_preferential' => $nextTicket->is_preferential,
+                'service_name' => $nextTicket->service_name
+            ] : null
         ]);
     }
 
-    private function getNextTicket($queueName)
+    private function getNextTicket($queueName, $currentTicketId = null)
     {
-        return Queue::where('queue_name', $queueName)
-                    ->where('status', 'waiting')
-                    ->orderBy('is_preferential', 'desc')
-                    ->orderBy('ticket_number')
-                    ->first();
+        $query = Queue::where('queue_name', $queueName)
+                      ->where('status', 'waiting')
+                      ->orderBy('is_preferential', 'desc')
+                      ->orderBy('ticket_number');
+
+        if ($currentTicketId) {
+            $query->where('id', '>', $currentTicketId);
+        }
+
+        return $query->first();
     }
 
     public function getCurrentTicket(Request $request)
@@ -104,7 +126,8 @@ class QueueController extends Controller
         $nextTicket = $this->getNextTicket($user->queue);
         return response()->json($nextTicket ? [
             'ticket_number' => $nextTicket->ticket_number,
-            'is_preferential' => $nextTicket->is_preferential
+            'is_preferential' => $nextTicket->is_preferential,
+            'service_name' => $nextTicket->service_name
         ] : null);
     }
 }

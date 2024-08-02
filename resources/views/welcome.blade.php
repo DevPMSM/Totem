@@ -44,10 +44,19 @@
         </div>
 
         <script>
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter') {
-                    window.location.href = '{{ route('index') }}';
+            function preventShiftKey(event) {
+                if (event.shiftKey) {
+                    event.preventDefault();
+                    console.log('Uso da tecla Shift bloqueado');
                 }
+            }
+
+            document.addEventListener('keydown', preventShiftKey);
+
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter') {
+                        window.location.href = '{{ route('index') }}';
+                    }
             });
         </script>
     </body>

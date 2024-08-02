@@ -1,0 +1,112 @@
+#attendanceTypeModal{
+    width: 100vw;
+    height: 100vh;
+}
+
+.modalbox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+    font-family: 'Lexend', sans-serif;
+    align-items: center;
+    position: static;
+}
+
+.cardTitle h2{
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.cardTitle h3{
+    font-size: 34px;
+}
+
+.cardTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0 35px 0;
+    height: 70%;
+    flex-direction: row;
+}
+
+.cardButtons img{
+    padding: 70px 45px 0 45px;
+}
+
+.cardClose{
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+}
+
+.first_line{
+    font-family: "Lexend", sans-serif;
+    padding: 5px;
+    font-weight:300;
+    font-size: 35px;
+}
+
+.foco{
+    font-weight: bold;
+}
+
+.cancela{
+    color: #f44336;
+    font-weight: 900;
+}
+
+.cardClose button{
+    border-radius: 25px;
+}
+
+.button_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.button_container span{
+    position: relative;
+    width: 50%;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 310px;
+}
+
+
+.button_container P{
+    position: relative;
+    width: 50%;
+    font-family: 'Lexend', sans-serif;
+    background-color: white;
+    border-radius: 25px;
+    color: none;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 210px;
+}
