@@ -11,12 +11,15 @@ O Totem fornece  acesso a algumas informações referentes às secretarias da pr
 
 ## Tecnologias Utilizadas
 
+- <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/1280px-MySQL_logo.svg.png" width="75" align="center" alt="MySQL Logo"> 
 - <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="100" align="center" alt="Laravel Logo"> 
+- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png" width="40" align="center" alt="CSS Logo"> 
+- <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" width="50" align="center" alt="JS Logo"> 
 
 
 
 ## Como Utilizar?
-O totem funciona como um grande menu interativo, onde as opções são apresentadas de forma intuitiva. A navegação é feita por meio de seleções numéricas, permitindo que o usuário explore as categorias disponíveis até encontrar a informação desejada.
+O totem funciona como um grande menu interativo, onde as opções são apresentadas de forma intuitiva. A navegação é feita por meio de seleções numéricas, permitindo que o usuário adentre as categorias disponíveis até encontrar a informação desejada.
 
 
 
